@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,17 +14,17 @@ Emphasizes clarity, consistency, and calm user experience.
     /* Core neutrals - Anki-inspired clean palette */
     --background: 0 0% 99%;
     --foreground: 210 15% 12%;
-    
+
     /* Elevated surfaces with subtle depth */
     --card: 0 0% 100%;
     --card-foreground: 210 15% 12%;
     --card-elevated: 210 40% 99.5%;
     --card-hover: 210 40% 98%;
-    
+
     /* Popover system */
     --popover: 0 0% 100%;
     --popover-foreground: 210 15% 12%;
-    
+
     /* Primary - Calm, professional blue */
     --primary: 210 100% 45%;
     --primary-foreground: 0 0% 100%;
@@ -30,23 +32,23 @@ Emphasizes clarity, consistency, and calm user experience.
     --primary-glow: 210 100% 55%;
     --primary-muted: 210 100% 97%;
     --primary-soft: 210 100% 95%;
-    
+
     /* Secondary - Subtle grays */
     --secondary: 210 15% 97%;
     --secondary-foreground: 210 15% 12%;
     --secondary-hover: 210 15% 95%;
-    
+
     /* Muted elements - improved readability */
     --muted: 210 15% 96%;
     --muted-foreground: 210 10% 50%;
     --muted-hover: 210 15% 94%;
-    
+
     /* Accent - Gentle green for positive actions */
     --accent: 140 55% 45%;
     --accent-foreground: 0 0% 100%;
     --accent-muted: 140 55% 96%;
     --accent-soft: 140 55% 94%;
-    
+
     /* Status colors - subtle and accessible */
     --success: 140 55% 45%;
     --success-foreground: 0 0% 100%;
@@ -57,28 +59,41 @@ Emphasizes clarity, consistency, and calm user experience.
     --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
     --destructive-muted: 0 65% 96%;
-    
+
     /* Interactive elements */
     --border: 210 15% 88%;
+    --border-strong: 210 15% 85%; /* Very subtle border for navbar/footer */
     --input: 210 15% 96%;
     --ring: 210 100% 45%;
-    
+
     /* Design tokens */
     --radius: 0.875rem;
     --radius-sm: 0.5rem;
     --radius-lg: 1rem;
-    
+
     /* Advanced gradients for premium feel */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card-elevated)));
-    --gradient-hero: linear-gradient(135deg, 
-      hsl(var(--primary) / 0.03) 0%, 
-      hsl(var(--accent) / 0.03) 50%, 
-      hsl(var(--primary) / 0.03) 100%);
-    --gradient-surface: linear-gradient(180deg, 
-      hsl(var(--card)), 
-      hsl(var(--muted)));
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(var(--card)),
+      hsl(var(--card-elevated))
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.03) 0%,
+      hsl(var(--accent) / 0.03) 50%,
+      hsl(var(--primary) / 0.03) 100%
+    );
+    --gradient-surface: linear-gradient(
+      180deg,
+      hsl(var(--card)),
+      hsl(var(--muted))
+    );
+
     /* Premium shadows with multiple layers */
     --shadow-xs: 0 1px 2px hsl(var(--foreground) / 0.04);
     --shadow-sm: 0 2px 4px hsl(var(--foreground) / 0.06);
@@ -87,7 +102,7 @@ Emphasizes clarity, consistency, and calm user experience.
     --shadow-xl: 0 16px 32px hsl(var(--foreground) / 0.16);
     --shadow-glow: 0 0 32px hsl(var(--primary) / 0.12);
     --shadow-glow-lg: 0 0 48px hsl(var(--primary) / 0.16);
-    
+
     /* Sophisticated animations */
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -106,86 +121,99 @@ Emphasizes clarity, consistency, and calm user experience.
 
   .dark {
     /* Dark mode - Anki-inspired dark theme */
-    --background: 210 20% 6%;
-    --foreground: 210 15% 95%;
-    
+    --background: 0 0% 4%; /* Even darker, almost pure black */
+    --foreground: 0 0% 100%; /* #ffffff */
+
     /* Elevated dark surfaces */
-    --card: 210 20% 8%;
-    --card-foreground: 210 15% 95%;
-    --card-elevated: 210 20% 10%;
-    --card-hover: 210 20% 12%;
-    
+    --card: 0 0% 3%; /* Even darker card background */
+    --card-foreground: 0 0% 100%; /* #ffffff */
+    --card-elevated: 0 0% 5%; /* Slightly lighter than card */
+    --card-hover: 0 0% 7%;
+
     /* Dark popovers */
-    --popover: 210 20% 8%;
-    --popover-foreground: 210 15% 95%;
-    
-    /* Primary - calm blue for dark mode */
-    --primary: 210 100% 55%;
-    --primary-foreground: 210 20% 6%;
-    --primary-hover: 210 100% 60%;
-    --primary-glow: 210 100% 65%;
-    --primary-muted: 210 100% 15%;
-    --primary-soft: 210 100% 12%;
-    
+    --popover: 0 0% 3%; /* Even darker popover */
+    --popover-foreground: 0 0% 100%; /* #ffffff */
+
+    /* Primary - Anki blue */
+    --primary: 210 100% 50%; /* #007acc */
+    --primary-foreground: 0 0% 4%; /* Even darker background */
+    --primary-hover: 210 100% 55%;
+    --primary-glow: 210 100% 60%;
+    --primary-muted: 210 100% 12%;
+    --primary-soft: 210 100% 10%;
+
     /* Dark secondary */
-    --secondary: 210 15% 15%;
-    --secondary-foreground: 210 15% 95%;
-    --secondary-hover: 210 15% 18%;
-    
+    --secondary: 0 0% 6%; /* Even darker secondary */
+    --secondary-foreground: 0 0% 100%; /* #ffffff */
+    --secondary-hover: 0 0% 8%;
+
     /* Refined muted elements */
-    --muted: 210 15% 14%;
-    --muted-foreground: 210 10% 65%;
-    --muted-hover: 210 15% 16%;
-    
+    --muted: 0 0% 5%; /* Even darker muted */
+    --muted-foreground: 0 0% 70%; /* Darker secondary text */
+    --muted-hover: 0 0% 7%;
+
     /* Dark accent - gentle green */
     --accent: 140 55% 55%;
-    --accent-foreground: 210 20% 6%;
-    --accent-muted: 140 55% 15%;
-    --accent-soft: 140 55% 12%;
-    
+    --accent-foreground: 0 0% 4%; /* Even darker background */
+    --accent-muted: 140 55% 12%;
+    --accent-soft: 140 55% 10%;
+
     /* Dark status colors */
     --success: 140 55% 55%;
-    --success-foreground: 210 20% 6%;
-    --success-muted: 140 55% 15%;
+    --success-foreground: 0 0% 4%; /* Even darker background */
+    --success-muted: 140 55% 12%;
     --warning: 35 90% 65%;
-    --warning-foreground: 210 20% 6%;
-    --warning-muted: 35 90% 15%;
+    --warning-foreground: 0 0% 4%; /* Even darker background */
+    --warning-muted: 35 90% 12%;
     --destructive: 0 65% 65%;
-    --destructive-foreground: 210 20% 6%;
-    --destructive-muted: 0 65% 15%;
-    
+    --destructive-foreground: 0 0% 4%; /* Even darker background */
+    --destructive-muted: 0 65% 12%;
+
     /* Dark interactive elements */
-    --border: 210 15% 20%;
-    --input: 210 15% 14%;
-    --ring: 210 100% 55%;
-    
+    --border: 0 0% 8%; /* Even darker border */
+    --border-strong: 0 0% 10%; /* Subtle border for navbar/footer - same power as light mode */
+    --input: 0 0% 5%; /* Even darker input */
+    --ring: 210 100% 50%; /* #007acc */
+
     /* Dark mode gradients - sophisticated depth */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card-elevated)));
-    --gradient-hero: linear-gradient(135deg, 
-      hsl(var(--primary) / 0.08) 0%, 
-      hsl(var(--accent) / 0.08) 50%, 
-      hsl(var(--primary) / 0.08) 100%);
-    --gradient-surface: linear-gradient(180deg, 
-      hsl(var(--card)), 
-      hsl(var(--muted)));
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--primary-glow))
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(var(--card)),
+      hsl(var(--card-elevated))
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary) / 0.08) 0%,
+      hsl(var(--accent) / 0.08) 50%,
+      hsl(var(--primary) / 0.08) 100%
+    );
+    --gradient-surface: linear-gradient(
+      180deg,
+      hsl(var(--card)),
+      hsl(var(--muted))
+    );
+
     /* Dark shadows with proper opacity */
     --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.08);
     --shadow-sm: 0 2px 4px hsl(0 0% 0% / 0.12);
     --shadow-md: 0 4px 8px hsl(0 0% 0% / 0.16);
-    --shadow-lg: 0 8px 16px hsl(0 0% 0% / 0.20);
+    --shadow-lg: 0 8px 16px hsl(0 0% 0% / 0.2);
     --shadow-xl: 0 16px 32px hsl(0 0% 0% / 0.24);
-    --shadow-glow: 0 0 32px hsl(var(--primary) / 0.20);
+    --shadow-glow: 0 0 32px hsl(var(--primary) / 0.2);
     --shadow-glow-lg: 0 0 48px hsl(var(--primary) / 0.25);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 3%; /* Even darker sidebar */
+    --sidebar-foreground: 0 0% 100%; /* #ffffff */
+    --sidebar-primary: 210 100% 50%; /* #007acc */
+    --sidebar-primary-foreground: 0 0% 100%; /* #ffffff */
+    --sidebar-accent: 0 0% 6%; /* Even darker accent */
+    --sidebar-accent-foreground: 0 0% 100%; /* #ffffff */
+    --sidebar-border: 0 0% 6%; /* Even darker border */
+    --sidebar-ring: 210 100% 50%; /* #007acc */
   }
 }
 
@@ -196,61 +224,78 @@ Emphasizes clarity, consistency, and calm user experience.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
+
   /* Anki-inspired typography system */
   h1 {
     @apply text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight;
+    font-family: "Sora", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.025em;
   }
-  
+
+  /* Modern sans-serif for problem text */
+  .problem-text {
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
   h2 {
     @apply text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: -0.02em;
   }
-  
+
   h3 {
     @apply text-xl md:text-2xl font-medium tracking-tight;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: -0.01em;
   }
-  
+
   h4 {
     @apply text-lg md:text-xl font-medium;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.4;
   }
-  
+
   /* Improved reading experience */
   p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.6;
     font-weight: 400;
   }
-  
+
   /* Body text variations */
   .text-body {
     @apply text-base leading-relaxed text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  
+
   .text-body-sm {
     @apply text-sm leading-relaxed text-muted-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  
+
   .text-label {
     @apply text-sm font-medium text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  
+
   /* Selection styling */
   ::selection {
     @apply bg-primary/20 text-foreground;
   }
-  
+
   /* Focus states */
   :focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
@@ -264,98 +309,110 @@ Emphasizes clarity, consistency, and calm user experience.
     background-size: 200% 100%;
     animation: gradient-shimmer 3s ease-in-out infinite;
   }
-  
+
   /* Card systems */
   .card-gradient {
     background: var(--gradient-card);
   }
-  
+
   .card-elevated {
     background: var(--gradient-surface);
   }
-  
+
   .hero-gradient {
     background: var(--gradient-hero);
   }
-  
+
   /* Shadow utilities */
   .shadow-elegant {
     box-shadow: var(--shadow-lg);
   }
-  
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .shadow-glow-lg {
     box-shadow: var(--shadow-glow-lg);
   }
-  
+
   /* Transition utilities */
   .transition-fast {
     transition: var(--transition-fast);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-spring {
     transition: var(--transition-spring);
   }
-  
+
   .transition-bounce {
     transition: var(--transition-bounce);
   }
-  
+
   /* Interactive elements */
   .hover-lift {
     @apply transition-smooth hover:translate-y-[-2px] hover:shadow-lg;
   }
-  
+
   .hover-glow {
     @apply transition-smooth hover:shadow-glow;
   }
-  
+
   .hover-scale {
     @apply transition-spring hover:scale-[1.02];
   }
-  
+
   /* Gradient animations */
   @keyframes gradient-shimmer {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 50%;
     }
     50% {
       background-position: 100% 50%;
     }
   }
-  
+
+  .animate-gradient-shimmer {
+    animation: gradient-shimmer 3s ease-in-out infinite;
+  }
+
   /* Floating animations */
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
       transform: translateY(-4px);
     }
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   /* Pulse glow effect */
   @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
       box-shadow: var(--shadow-glow);
     }
     50% {
       box-shadow: var(--shadow-glow-lg);
     }
   }
-  
+
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Glass card effect for About page */
+  .card-glass {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-8 shadow-elegant;
   }
 }
