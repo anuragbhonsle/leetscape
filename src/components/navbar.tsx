@@ -46,13 +46,8 @@ export function Navbar() {
           {/* Logo and Brand */}
           <Link
             to="/"
-            className="flex items-center space-x-3 transition-smooth hover:opacity-80"
+            className="flex items-center transition-smooth hover:opacity-80"
           >
-            <img
-              src="/logo.png"
-              alt="LeetScape"
-              className="h-8 w-8 object-contain"
-            />
             <span className="text-xl font-semibold text-foreground">
               LeetScape
             </span>

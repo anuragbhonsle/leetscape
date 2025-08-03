@@ -23,13 +23,13 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBXT3H0JL5uhZCVjPD9slVkk7I3XpVtoMA",
-  authDomain: "leettracker-12844.firebaseapp.com",
-  projectId: "leettracker-12844",
-  storageBucket: "leettracker-12844.firebasestorage.app",
-  messagingSenderId: "926518178030",
-  appId: "1:926518178030:web:96e8440640349b7f9583ff",
-  measurementId: "G-9QMY0HSRXN",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
