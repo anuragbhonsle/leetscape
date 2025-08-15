@@ -23,7 +23,7 @@ A clean, focused web application for tracking and managing your LeetCode practic
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js
 - npm or yarn
 
 ### Installation
