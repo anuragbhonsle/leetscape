@@ -13,7 +13,7 @@ A clean, focused web application for tracking and managing your LeetCode practic
 ## Tech Stack
 
 - **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with shadcn/ui components
+- **Styling**: Tailwind CSS with shadcn/ui 
 - **Build Tool**: Vite
 - **Routing**: React Router DOM
 - **State Management**: React Query
