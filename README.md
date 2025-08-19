@@ -13,7 +13,7 @@ A clean, focused web application for tracking and managing your LeetCode practic
 ## Tech Stack
 
 - **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with shadcn/ui components
+- **Styling**: Tailwind CSS 
 - **Build Tool**: Vite
 - **Routing**: React Router DOM
 - **State Management**: React Query
@@ -23,7 +23,7 @@ A clean, focused web application for tracking and managing your LeetCode practic
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
+- Node.js
 - npm or yarn
 
 ### Installation
@@ -74,6 +74,3 @@ src/
 3. Make your changes
 4. Submit a pull request
 
-## License
-
-This project is licensed under the MIT License.
