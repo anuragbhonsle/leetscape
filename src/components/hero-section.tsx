@@ -9,26 +9,21 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
+      {/* Background GIF */}
+      <img
+        src="https://i.pinimg.com/originals/c8/b2/e0/c8b2e0b466dabc9d18a152751abc5744.gif"
+        alt="background gif"
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{
-          filter: "blur(3px) brightness(0.8) saturate(1.2) contrast(1.2)",
+          filter: "blur(1px) brightness(0.9) saturate(1.4) contrast(1.3)",
         }}
-      >
-        <source src="/dsa.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      />
 
       {/* Overlay for readability */}
       <div
         className="absolute inset-0 bg-black/50 z-0"
         style={{
-          backdropFilter: "blur(2px)", // affects overlay area
+          backdropFilter: "blur(1px)", // affects overlay area
         }}
       />
 
